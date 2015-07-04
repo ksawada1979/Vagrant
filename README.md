@@ -1,13 +1,13 @@
-全てのファイルはVagrantfileにリネームして使用してください。
+全てのファイルはVagrantfileにリネームして使用してください。<br>
+<br>
+▪️Vagrantfile.baes<bre
 
-▪️Vagrantfile.base
 
-
-
-▪️Vagrantfile.drbd
-DRBD及びLinux-HA環境を作成用のVagrantfile
-
-環境
-CentOS6.6
-仮想サーバを２台構築
-追加のHDD増設済
+<br>
+▪️Vagrantfile.drb<br>d
+DRBD及びLinux-HA環境を作成用のVagrantfile<br>
+<br>
+環境<br>
+CentOS6.6<br>
+仮想サーバを２台構築<br>
+追加のHDD増設済<br>
