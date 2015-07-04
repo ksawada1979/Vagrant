@@ -1,10 +1,10 @@
 全てのファイルはVagrantfileにリネームして使用してください。<br>
 <br>
-▪️Vagrantfile.baes<bre
+▪️Vagrantfile.baes<br>
 
 
 <br>
-▪️Vagrantfile.drb<br>d
+▪Vagrantfile.drbd<br>
 DRBD及びLinux-HA環境を作成用のVagrantfile<br>
 <br>
 環境<br>
