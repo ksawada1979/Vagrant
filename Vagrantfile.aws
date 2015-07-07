@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  ssh_username = "ec2-user"
+  region = "ap-northeast-1"
+  ami = "ami-b1b458b1"
+  instance_type = "t2.micro"
+
+  config.vm.box = "dummy"
+  config.vm.define :primary do |primary|
+    primary.vm.provider :aws do |aws, override|
+      aws.access_key_id = ENV['AWS_ACCESS_KEY_ID']
+      aws.secret_access_key = ENV['AWS_SECRET_KEY']
+      aws.keypair_name = ENV['AWS_KEYPAIR_NAME']
+      override.ssh.username = ssh_username
+      override.ssh.private_key_path = ENV['AWS_PRIVATE_KEY_PATH']
+
+      aws.region = region
+      aws.subnet_id = "subnet-1ee72169"
+      aws.security_groups = "sg-36a07e53"
+      aws.elastic_ip = true
+      aws.private_ip_address = "172.31.0.5"
+      aws.tags = aws.tags = { "Name" => "AWS-host", "env" => "dev"}
+      aws.user_data = "#!/bin/sh\nsed -i 's/^.*requiretty/#Defaults requiretty/' /etc/sudoers\n"
+      aws.ami = ami
+      aws.instance_type = instance_type
+
+    end
+  end
+
+end
