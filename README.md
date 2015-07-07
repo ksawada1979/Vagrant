@@ -1,7 +1,7 @@
 全てのファイルはVagrantfileにリネームして使用してください。<br>
 <br>
 ▪️Vagrantfile.aws<br>
-AWS EC2起動用s<br
+AWS EC2起動用<br>
 
 
 ▪️Vagrantfile.baes<br>
