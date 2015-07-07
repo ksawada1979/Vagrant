@@ -1,5 +1,9 @@
 全てのファイルはVagrantfileにリネームして使用してください。<br>
 <br>
+▪️Vagrantfile.awss<br>
+
+
+
 ▪️Vagrantfile.baes<br>
 
 
